@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Exploding_dice.wav-1b6d6be11c55b71d25412fcc35341801.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Exploding_dice.wav"
+dest_files=[ "res://.import/Exploding_dice.wav-1b6d6be11c55b71d25412fcc35341801.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/One_Time_Sound.gd" type="Script" id=1]
+
+[node name="ExplosionSound" type="AudioStreamPlayer2D"]
+script = ExtResource( 1 )

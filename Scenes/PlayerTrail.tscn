@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Trail.gd" type="Script" id=1]
+
+[sub_resource type="Curve" id=8]
+_data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
+
+[node name="PlayerTrail" type="Line2D"]
+modulate = Color( 2, 2, 2, 1 )
+show_behind_parent = true
+width = 8.0
+width_curve = SubResource( 8 )
+default_color = Color( 0.984314, 0.733333, 0.678431, 0.686275 )
+script = ExtResource( 1 )

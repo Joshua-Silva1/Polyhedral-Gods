@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/Bullet.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sprites/Dice Sprites.png" type="Texture" id=2]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 0, -5, 7, 0, 0, 5, -7, 0 )
+
+[sub_resource type="Curve" id=2]
+_data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
+
+[node name="Bullet" type="Area2D" groups=["shot"]]
+modulate = Color( 1.7, 1.7, 1.7, 1 )
+collision_layer = 8
+collision_mask = 4
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 0.984314, 0.733333, 0.678431, 1 )
+rotation = 4.71239
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 2 )
+hframes = 6
+vframes = 3
+frame = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2( 2, 2 )
+shape = SubResource( 1 )
+
+[node name="DiceFace" type="Label" parent="."]
+margin_left = -12.5
+margin_top = -7.5
+margin_right = 3.5
+margin_bottom = 7.5
+align = 1
+valign = 1
+
+[node name="Trail" type="Line2D" parent="."]
+width = 3.0
+width_curve = SubResource( 2 )
+
+[node name="Trail_pos" type="Position2D" parent="."]
+position = Vector2( -12, 0 )
+
+[connection signal="body_entered" from="." to="." method="_on_Bullet_body_entered"]
